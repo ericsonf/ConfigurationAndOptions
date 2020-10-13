@@ -350,8 +350,7 @@ MigrationBackup/
 .ionide/
 
 # Rider
-.idea/
-*.idea
+.idea
 
 #MacOs
 .DS_Store
