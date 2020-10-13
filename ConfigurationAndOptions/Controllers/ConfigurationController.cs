@@ -19,8 +19,8 @@ namespace ConfigurationAndOptions.Controllers
         public string Get()
         {
             //Utilizando uma classe para controlar o acesso as properties do appsettings.json através dos métodos GetSection e GetValue.
-            var configuration = new Config(_configuration);
-            return configuration.ShowGreetingMessage();
+            var config = new Config(_configuration);
+            return config.ShowGreetingMessage();
         }
         
         [HttpGet]
