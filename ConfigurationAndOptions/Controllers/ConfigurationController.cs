@@ -27,7 +27,10 @@ namespace ConfigurationAndOptions.Controllers
         [Route("{message}")]
         public string Get(string message)
         {
-            //Utilizando uma classe que através do método Bind nos permite utilizar as propriedades do appsettings.json como propriedades de uma classe qualquer.
+            /*
+             * Utilizando uma classe que através do método Bind nos permite utilizar as propriedades do appsettings.json
+             * como propriedades de uma classe qualquer.
+             */
             var configurations = new Configurations();
             _configuration.Bind("Configurations:Greetings", configurations);
             return configurations.Enable ? $"{ configurations.Message } {message}" : string.Empty;
